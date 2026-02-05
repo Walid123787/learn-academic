@@ -1,0 +1,370 @@
+:root {
+  color-scheme: light;
+  --primary: #3a5bff;
+  --primary-dark: #2742c5;
+  --accent: #ffb74d;
+  --bg: #f5f7ff;
+  --text: #1c1f2a;
+  --muted: #6f768f;
+  --card: #ffffff;
+  --border: #e0e5ff;
+  font-family: "Manrope", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hero {
+  background: radial-gradient(circle at top, #ffffff 0%, #e8ecff 45%, #f5f7ff 100%);
+  padding: 32px 8vw 80px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.nav-links a:hover {
+  color: var(--text);
+}
+
+.primary-button,
+.secondary-button {
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.primary-button {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 12px 24px rgba(58, 91, 255, 0.2);
+}
+
+.primary-button:hover {
+  background: var(--primary-dark);
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.secondary-button:hover {
+  border-color: var(--primary);
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: clamp(2rem, 3vw, 3.2rem);
+  margin: 12px 0 16px;
+}
+
+.hero-text p {
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.badge {
+  display: inline-flex;
+  background: rgba(58, 91, 255, 0.1);
+  color: var(--primary);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.hero-stats strong {
+  font-size: 1.4rem;
+  display: block;
+}
+
+.hero-stats span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.hero-card {
+  background: var(--card);
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(16, 24, 64, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lesson-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.lesson-meta {
+  display: flex;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.section {
+  padding: 80px 8vw;
+}
+
+.section.alt {
+  background: #ffffff;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.section-header p {
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.info-card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-card ul,
+.exercise-panel ul,
+.price-card ul {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.media-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.media-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: 0 8px 24px rgba(16, 24, 64, 0.08);
+}
+
+.media-thumb {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(255, 183, 77, 0.2);
+  display: grid;
+  place-items: center;
+  font-size: 1.8rem;
+}
+
+.exercise-layout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.exercise-panel {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exercise-panel.summary {
+  background: #fdf4e3;
+}
+
+.options {
+  display: grid;
+  gap: 12px;
+}
+
+.option {
+  border: 1px solid var(--border);
+  background: #f8f9ff;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.option.selected {
+  border-color: var(--primary);
+  background: rgba(58, 91, 255, 0.12);
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+
+.feedback {
+  background: #eef2ff;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.price-card {
+  background: var(--card);
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.price-card.featured {
+  border: 2px solid var(--primary);
+  transform: translateY(-8px);
+}
+
+.price {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.tag {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--accent);
+  color: #3b2d0f;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: #2b2f4a;
+  color: #ffffff;
+  border-radius: 24px;
+  margin: 0 8vw 80px;
+}
+
+.cta p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer {
+  padding: 40px 8vw;
+  background: #0f1428;
+  color: #ffffff;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.footer-links {
+  display: grid;
+  gap: 8px;
+}
+
+.footer-note {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 720px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
